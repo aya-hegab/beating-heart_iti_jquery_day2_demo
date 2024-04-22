@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>beating-heart</title>
+    <!-- <script src="jquery-3.7.1.js"></script> -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  </head>
+  <body>
+    <ul>
+      <li>HTML5</li>
+      <li>CSS</li>
+      <li>JS</li>
+      <li>jQuery</li>
+    </ul>
+    <span style="font-size: 40px; color: red">&hearts;</span>
+    <script>
+      $("span").hover(function () {
+        $(this).fadeOut(700).fadeIn(700);
+      });
+
+      $("span").on("click", function () {
+        $("li").append($(this).clone(true));
+      });
+    </script>
+  </body>
+</html>
